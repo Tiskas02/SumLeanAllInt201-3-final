@@ -24,6 +24,7 @@ console.log(typeof q)
 
 //Array
 let num = [1,3,5,7,9]
+console.log('111111111111111111111');
 console.log(`Array type => ${typeof num}`)
 const ob = {id: 7, name: 'AHA'}
 console.log(`Object type => ${typeof ob}`)

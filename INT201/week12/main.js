@@ -105,7 +105,7 @@ userElement.addEventListener('keydown', (e) => {
 // when user release enter key, text value on username will show at <p> element
 userElement.addEventListener('keyup', (e) => {
   if (e.key === 'Enter') {
-    const pElement = document.querySelector('p')
+    const pElement = document.querySelector('div>p')
     pElement.textContent = e.target.value
   }
 })
