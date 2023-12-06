@@ -10,7 +10,6 @@ function isPasswordValid(password) {
   const passwordSpecial ='@#$%^&\*!'
   const passwordSpecialNum ='@#$%^&\*!1234567980'
   const passwordUpper = password.toUpperCase().split('')
-  console.log(passwordUpper);
   const passSplitUpper = passwordUpper.filter(x => !passwordSpecialNum.includes(x))
   const passwordLower = password.toLowerCase().split('')
   const passSplitLower = passwordLower.filter(x => !passwordSpecialNum.includes(x))
