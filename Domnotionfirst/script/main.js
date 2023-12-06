@@ -7,7 +7,48 @@ colorClick.addEventListener("click",() =>{
   rainbow.style.backgroundColor = colorArray[Math.floor(Math.random()*colorArray.length)]
 }
 )
+//chatGpt
+// const addClick = document.getElementById("add-btn");
+// const Ul = document.querySelector("#listItem > ul");
+
+// document.addEventListener("DOMContentLoaded", () => {
+//   const addLocal = JSON.parse(localStorage.getItem("items")) || [];
+//   addLocal.forEach((element) => {
+//     const html = `<li>${element}</li>`;
+//     Ul.insertAdjacentHTML('afterbegin', html);
+//   });
+// });
+
+// addClick.addEventListener("click", () => {
+//   const itemInBack = document.getElementById("item-input");
+//   const errormsg = document.querySelector(".error");
+  
+//   if (!itemInBack.value) {
+//     errormsg.textContent = "Please Enter some content to continue!";
+//     return;
+//   }
+  
+//   errormsg.textContent = '';
+//   const html = `<li>${itemInBack.value}</li>`;
+//   Ul.insertAdjacentHTML('beforeend', html);
+  
+//   const storeItem = JSON.parse(localStorage.getItem("items")) || [];
+//   storeItem.push(itemInBack.value);
+//   localStorage.setItem("items", JSON.stringify(storeItem));
+// });
+
 const addClick = document.getElementById("add-btn")
+const Ul = document.querySelector("#listItem>ul")
+
+document.addEventListener("DOMContentLoaded",() => {
+  const addlocal = JSON.parse(localStorage.getItem("items")) || []
+  addlocal.forEach(element => {
+    console.log("sfsf");
+    const html = `<li>${element}</li>`;
+    Ul.insertAdjacentHTML('afterbegin',html)
+  });
+}
+)
 addClick.addEventListener("click",() =>{
   const itemInBack = document.getElementById("item-input")
   const errormsg = document.querySelector(".error")
@@ -16,9 +57,18 @@ addClick.addEventListener("click",() =>{
     return
   }
   errormsg.textContent = ''
-  const Ul = document.querySelector("div>ul")
   const html = `<li>${itemInBack.value}</li>`;
   Ul.insertAdjacentHTML('beforeend', html);
+  const storeItem = JSON.parse(localStorage.getItem("items")) || []
+  storeItem.push(itemInBack.value)
+  localStorage.setItem("items",JSON.stringify(storeItem))
+  //other chai movement
+  // const storeItem1 = JSON.parse(localStorage.getItem("items"))
+  // if(!storeItem1){
+  //   storeItem1 = []
+  // }
+  // storeItem.push(itemInBack.value)
+  // localStorage.setItem("items",JSON.stringify(storeItem))
 }) 
 
 const addSection = document.getElementById("input-list")
