@@ -6,7 +6,7 @@ Welcome to our Discord JavaScript repository! This repository contains code snip
 
 To use the code in this repository, follow these steps:
 
-1. Clone this repository to your local machine using `git clone https://github.com/your-username/discord-js-repo.git`.
+1. Clone this repository to your local machine using `git clone https://github.com/Tiskas02/SumLeanAllInt201-3-final.git`.
 2. Navigate to the project directory.
 3. Open the files using your preferred code editor.
 
