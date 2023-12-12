@@ -39,10 +39,10 @@ ids[ids.length] = 555;
 console.log(ids);
 
 let m,
-  n,
-  o = 1,
-  p = true,
-  q = null;
+    n,
+    o = 1,
+    p = true,
+    q = null;
 console.log(m); //return undefined
 console.log(n); //return undefined
 console.log(o);
