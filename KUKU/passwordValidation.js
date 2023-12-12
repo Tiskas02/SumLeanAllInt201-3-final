@@ -32,7 +32,6 @@ function isPasswordValid(password) {
     }
   });
   return storeData.every(x => x)
- 
 }
 console.log(isPasswordValid('Ajl@4'));
 
