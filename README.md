@@ -1,39 +1,51 @@
-# Discord JavaScript Repository
+# LAB Exam: Instruction
 
-Welcome to our Discord JavaScript repository! This repository contains code snippets and examples focusing on DOM manipulation, array methods, and objects in JavaScript, specifically tailored for Discord bot development and interactions.
+\*\*\*Write your student id, firstname, and lastname in a single line comment before starting your program, students who do not put this comment will get 50% taken off their score.\*\*\*
 
-## Getting Started
+# Product Requirements
 
-To use the code in this repository, follow these steps:
+Your JavaScript allows users to add new product name by entering text into the input field, clicking the "Add" button, and remove individual products by clicking the "Remove" button associated with each product. Additionally, there is a "Remove All" button that clears the entire product list.
 
-1. Clone this repository to your local machine using `git clone https://github.com/Tiskas02/SumLeanAllInt201-3-final.git`.
-2. Navigate to the project directory.
-3. Open the files using your preferred code editor.
+## HTML Structure:
 
-## Contents
+The HTML contains a product container with an input field, an "Add" button, and a "Remove All" button.
+There is a separate container for the product list identified by the product-list id.
 
-### DOM Manipulation
+## JavaScript Program:
 
-The `dom_functions.js` file includes examples and functions for manipulating the Document Object Model (DOM) within Discord bot interactions.
+### registerEvent Function
 
-### Array Methods
+1. Add an event listener to the "Add" button to call the "addNewProduct" function when clicked.
+2. Add an event 'click' to the "Remove All" button by calling handler function named "removeAllProduct" to clear the entire product items inside product list.
 
-Explore various array methods in the `array_methods.js` file. These examples demonstrate how to use methods like `map`, `filter`, `reduce`, and more to manipulate arrays efficiently.
+### addNewProduct Function:
 
-### Objects
+You AddNewProduct function must check the input value is not an empty string before proceeding to create and add a new product to the product list. If the input is empty, the program does not add an empty product to the product list.
 
-The `objects.js` file showcases different techniques and functionalities related to objects in JavaScript, including object creation, manipulation, and accessing object properties.
+1. query the input element to get the new product and then dynamically create HTML elements structure as follow:
 
-## Contributing
+   - Create a new div element with a unique id based on the entered product name and a class name "product-item"
+   - Create a p element to display the product name
+   - Create a "Remove" button for each product, with an event listener to call the "removeProduct" function by sending its id to the function.
+   - Append the p element and "Remove" button to the product-list.
+   - Clear a previous product name in the input textbox.
+   - For example, filling an product name "abc" in input element, it will create a new product element inside <div id="product-list"></div> like this:
 
-We welcome contributions to improve and expand this repository! If you have any suggestions, bug fixes, or additional code examples related to Discord bot development using JavaScript, feel free to submit a pull request.
+```
+<div id="abc" class="product-item">
+      <p>abc</p>
+      <button>Remove</button>
+ </div>
+```
 
-## License
+### removeProduct Function:
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
+accept the product id as its parameter and then select that product element to be removed from product-list parent element.
 
-## Acknowledgements
+### removeAllProduct Function:
 
-Special thanks to contributors and the open-source community for their valuable contributions and support.
+remove all the entire product items inside product list
 
-Happy coding! 🚀
+# Screen Capture Outputs
+
+- ![demo clip](demoOutput/demo.mp4)
