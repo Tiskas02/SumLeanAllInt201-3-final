@@ -3,6 +3,7 @@ const salesArray = [
   [120, 100, 90, 110, 95], // Sales for Product B
   [80, 70, 60, 90, 100], // Sales for Product C
 ]
+
 function getTotalSales(...arrays) {
   const arr = [...arrays]
   const arrFlat = arr.flat(1)
@@ -10,6 +11,7 @@ function getTotalSales(...arrays) {
   for (let i = 0; i < 5; i++) {
     for (const iterator of arrFlat) {
         sums[i % 5] += iterator[i];
+        console.log(iterator[i]);
     }
   }
   return sums.forEach((value, index) => {

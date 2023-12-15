@@ -1,5 +1,5 @@
 import { GuestManagement } from '../lib/GuestManagement.js'
-const GuestManagement = require('../lib/GuestManagement.js')
+// const GuestManagement = require('../lib/GuestManagement.js')
 
 const createGuestList = () => {
   const guestList = new GuestManagement()
